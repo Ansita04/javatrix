@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Concepts in Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="oop.html">OOP</a></li>
+                <li><a href="exceptions.html">Exceptions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h2>Object-Oriented Programming (OOP) in Java</h2>
+        <p>Java follows the object-oriented programming paradigm, which is based on the concepts of objects and classes.</p>
+        <h3>Key OOP Principles</h3>
+    <ul>
+        <li><strong>Encapsulation:</strong> Wrapping data and methods into a single unit (class) to protect it from unauthorized access.</li>
+        <li><strong>Inheritance:</strong> Enabling a class to inherit properties and methods from another class, reducing code redundancy.</li>
+        <li><strong>Polymorphism:</strong> Allowing methods to perform different behaviors based on the object, enhancing flexibility.</li>
+        <li><strong>Abstraction:</strong> Hiding implementation details and exposing only necessary parts to reduce complexity.</li>
+    </ul>
+    
+    <h2>Example: Class and Object</h2>
+    <p>The following example demonstrates class creation, object instantiation, and method usage.</p>
+    <section>
+    <pre>
+        class Car {
+            String model;
+            int year;
+            
+            // Constructor to initialize values
+            Car(String model, int year) {
+                this.model = model;
+                this.year = year;
+            }
+            
+            // Method to display car details
+            void display() {
+                System.out.println("Car Model: " + model + ", Year: " + year);
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                Car myCar = new Car("Toyota", 2022);
+                myCar.display();
+            }
+        }
+    </pre>
+</section>
+    <h2>Encapsulation Example</h2>
+    <p>Encapsulation restricts direct access to class fields by making them private and provides getter and setter methods.</p>
+    <section>
+    <pre>
+        class Person {
+            private String name; // Private variable (data hiding)
+            
+            // Getter method
+            public String getName() {
+                return name;
+            }
+            
+            // Setter method
+            public void setName(String newName) {
+                this.name = newName;
+            }
+        }
+    </pre>
+</section>
+    <h2>Polymorphism Example</h2>
+    <p>Polymorphism allows the same method to perform different tasks.</p>
+    <section>
+    <pre>
+        class Animal {
+            void makeSound() {
+                System.out.println("Animal makes a sound");
+            }
+        }
+        
+        class Dog extends Animal {
+            @Override
+            void makeSound() {
+                System.out.println("Dog barks");
+            }
+        }
+    </pre>
+</section>
+    <h2>Abstraction Example</h2>
+    <p>Abstraction is implemented using abstract classes or interfaces.</p>
+<section>
+    <pre>
+        abstract class Vehicle {
+            abstract void start(); // Abstract method
+        }
+        
+        class Car extends Vehicle {
+            void start() {
+                System.out.println("Car starts with a key");
+            }
+        }
+    </pre>
+</section>
+</main>
+<footer>
+    <p>&copy; 2025 Learn Java. All rights reserved.</p>
+</footer>
