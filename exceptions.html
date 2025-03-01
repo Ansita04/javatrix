@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling in Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="oop.html">OOP</a></li>
+                <li><a href="exceptions.html">Exceptions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h2>Understanding Exceptions</h2>
+        <p>Exceptions in Java are events that disrupt the normal flow of execution. They are used to handle runtime errors gracefully.</p>
+        
+        <h2>Types of Exceptions</h2>
+        <ul>
+            <li><strong>Checked Exceptions:</strong> Must be handled using try-catch or declared using throws.</li>
+            <li><strong>Unchecked Exceptions:</strong> Occur due to programming logic errors (e.g., NullPointerException).</li>
+            <li><strong>Error:</strong> Represents serious problems like OutOfMemoryError.</li>
+        </ul>
+        
+        <h2>Example: Try-Catch Block</h2>
+        <section>
+        <pre>
+            public class ExceptionExample {
+                public static void main(String[] args) {
+                    try {
+                        int result = 10 / 0; // This will cause an exception
+                    } catch (ArithmeticException e) {
+                        System.out.println("Cannot divide by zero!");
+                    }
+                }
+            }
+        </pre>
+        <p>The above example demonstrates handling an ArithmeticException using a try-catch block.</p>
+        </section>
+        <h2>Example: Multiple Catch Blocks</h2>
+        <section>
+        <pre>
+            public class MultipleCatchExample {
+                public static void main(String[] args) {
+                    try {
+                        int[] numbers = {1, 2, 3};
+                        System.out.println(numbers[5]); // ArrayIndexOutOfBoundsException
+                    } catch (ArithmeticException e) {
+                        System.out.println("Arithmetic Exception occurred");
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                        System.out.println("Array Index Out of Bounds!");
+                    } catch (Exception e) {
+                        System.out.println("An error occurred: " + e.getMessage());
+                    }
+                }
+            }
+        </pre>
+        <p>This example shows handling multiple types of exceptions separately.</p>
+        </section>
+        <h2>Example: Finally Block</h2>
+        <section>
+        <pre>
+            public class FinallyExample {
+                public static void main(String[] args) {
+                    try {
+                        int result = 10 / 2;
+                        System.out.println("Result: " + result);
+                    } catch (ArithmeticException e) {
+                        System.out.println("Cannot divide by zero!");
+                    } finally {
+                        System.out.println("This block always executes");
+                    }
+                }
+            }
+        </pre>
+        <p>The <strong>finally</strong> block ensures that a specific set of statements always executes, regardless of exceptions.</p>
+       </section> 
+        <h2>Example: Throwing an Exception</h2>
+        <section>
+        <pre>
+            public class ThrowExample {
+                static void checkAge(int age) {
+                    if (age < 18) {
+                        throw new IllegalArgumentException("Age must be 18 or older");
+                    } else {
+                        System.out.println("Access granted");
+                    }
+                }
+                
+                public static void main(String[] args) {
+                    checkAge(16);
+                }
+            }
+        </pre>
+        <p>The <strong>throw</strong> keyword is used to explicitly throw an exception.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Learn Java. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body{
+ background-color: #112a42;
+ color: #92c5d9;
+}
+header {
+    background: #112a42;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0%;
+}
+nav ul li {
+    display:inline;
+    margin-right: 45px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #92c5d9;
+}
+.bg{
+    width: 98%; 
+    height: 650px; 
+    background-color: black;
+    position: relative;
+    padding: 10px;
+    background-color: #92c5d9;
+    margin-left: 5px;
+}
+#small{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    background-color: white;
+    background-color: #112a42;
+    border-radius: 20px;
+}
+#small h1{
+        font-style: oblique;
+        font-family: precious;
+        color:#92c5d9;
+        padding-top: 5%;
+        padding-left: 20px;
+        font-size: 700%;
+        margin-bottom: 10px;
+}
+#small p{
+        font-style: oblique;
+        font-family: precious;
+        margin-left: 40px;
+        color:#92c5d9;
+        font-size: 150%;
+        margin-top: 0%;
+}
+#img{
+    position: absolute;
+    right: 70px;
+    top: 100px;
+    left: 65%;
+    bottom: 200px;
+    height: 350px;
+    width: 400px;
+}
+nav button{
+    position: absolute;
+    width: 100px;
+    padding: 15px 0px;
+    text-align:center;
+    margin: 20px 50px;
+    font-weight: bold;
+    border: 2px solid #92c5d9;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    color:#92c5d9;
+    border-radius: 20px;
+}
+.images{
+    position:relative;
+    display: inline-block;
+    background-color: rgb(234, 231, 231);
+    margin-top: 20px;
+    margin-left: 75px;
+    transition: 1s;
+    border-radius: 50%;
+    padding: 150px;
+}
+#div1{
+    background-image: url("beginner.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#div2{
+    background-image: url("intermidiate.avif");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#div3{
+    background-image: url("professional.avif");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.images:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+.bigdiv h3{
+    display:ruby;
+    position:absolute;
+}
+section {
+    background: #112a42;
+    margin: 20px auto;
+    padding: 20px;
+    width: 96%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #92c5d9;
+}
+footer{
+    text-align: center;
+}
+pre{
+    color: rgb(255, 238, 216);
+    font-size: large;
+}
+ul li{
+    font-size: larger;
+}
+p{
+    font-size: larger;
+}
+hr{
+    color: #92c5d9;
+    border-style:double;
+}
+
+.quiz-container {
+    background: #ddd7ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(212, 201, 216);
+    width: 400px;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 180px;
+}
+
+.quiz-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color:#5b0480;
+}
+
+.question {
+    background: #e5d7f3;
+    color: rgb(14, 49, 78);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.option-box {
+    width: 48%;
+    background: rgb(83, 16, 107);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.option-box:hover {
+    background: #bf81e6;
+}
+
+.option-box.selected {
+    border-color: #a8bad0;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    background: #5b0480;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bf81e6;
+}
+
+.progress-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#5c2176 0%, #ddd 0%);
+    display: inline-block;
+    margin-top: 10px;
+}
+.options{
+    color: #ddd;
+}
+.quiz-container p{
+    color: #5c2176;
+}
